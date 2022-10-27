@@ -7,6 +7,19 @@
     <title>Exchanged Rate</title>
 </head>
 <body>
+    <style>
+        #convert_rate{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #convert-ratee{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
 
     <select name="Currency" id="country">
         <option value="AED">UAE Dirham</option>
@@ -171,20 +184,31 @@
         <option value=""></option>
         <option value=""></option> -->
      </select>
-     <input type="submit" value="" onclick="exchange()">
+     <input type="submit" value="CONVERT" onclick="exchange()">
+     <div id="convert-ratee">
+
+
+     </div>
      <div id="convert_rate">
         <p id="currency"></p>
         <p id="rate"></p>
      </div>
+
+     <!-- End of first innterface -->
+     
      
 
 
 
 
      
-    <script src="https://unpkg.com/axios/dist/axios.min.js">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
 
         function exchange(){
+            document.getElementById('convert-ratee').innerHTML = `<p><b>CURRENCY<b></p> <p id="ratee"><b>RATE</b></p>`;
+
             let mySelect = document.getElementById('country');
 
            let rate= mySelect.value
@@ -194,21 +218,24 @@
             let convert = current_rate.conversion_rates;
             for(let key in convert){
                 if (key){
-                    document.getElementById('currency').innerHTML += key;
-                    // console.log(key)
+                    document.getElementById('currency').innerHTML += key + `<br>`;
+                    // console.log(key);
             
                 }
+                // console.log(key);
+            
             }
             for(let i in convert){
                 if (i){
-                    document.getElementById('rate').innerHTML += convert[i];
-            
+                    document.getElementById('rate').innerHTML += convert[i] + `<br>`;
+                    // console.log(convert[i]);
                 }
             }
              
             })
        
     }
+    // End of javascript for first interface
 
     </script>
 </body>
