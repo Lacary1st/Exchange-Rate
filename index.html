@@ -26,6 +26,46 @@
         <option value="BHD">Bahraini Dinar</option>
         <option value="BIF">Burundian Franc</option>
         <option value="BMD">Bermudian Dollar</option>
+        <option value="BND">Brunei Dollar</option>
+        <option value="BOB">Bolivian Boliviano</option>
+        <option value="BRL">Brazilian Real</option>
+        <option value="BSD">Bahamian Dollar</option>
+        <option value="BTN">Bhutanese Ngultrum</option>
+        <option value="BWP">Botswana Pula</option>
+        <option value="BYN">Belarusian Ruble</option>
+        <option value="BZD">Belize Dollar</option>
+        <option value="CAD">Canadian Dollar</option>
+        <option value="CDF">Congolese Franc</option>
+        <option value="CHF">Swiss Franc</option>
+        <option value="CNY">Chinese Renminbi</option>
+        <option value="COP">Colombian Peso</option>
+        <option value="CRC">Costa Rican Colon</option>
+        <option value="CUP">Cuban Peso</option>
+        <option value="CVE">Cape Verdean Escudo</option>
+        <option value="CZK">Czech Koruna</option>
+        <option value="DJF">Djiboutian Franc</option>
+        <option value="DKK">Danish Krone</option>
+        <option value="DOP">Dominican Peso</option>
+        <option value="DZD">Algerian Dinar</option>
+        <option value="EGP">Egyptian Pound</option>
+        <option value="ERN">Eritrean Nakfa</option>
+        <option value="ETB">Ethiopian Birr</option>
+        <option value="EUR">Euro</option>
+        <option value="FJD">Fiji Dollar</option>
+        <option value="FKP">Falkland Islands Pound</option>
+        <option value="FOK">Faroese Króna</option>
+        <option value="GBP">Pound Sterling</option>
+        <option value="GEL">Georgian Lari</option>
+        <option value="GGP">Guernsey Pound</option>
+        <option value="GHS">Ghanaian Cedi</option>
+        <option value="GIP">Gibraltar Pound</option>
+        <option value="GMD">Gambian Dalasi</option>
+        <option value="GNF">Guinean Franc</option>
+        <option value="GTQ">Guatemalan Quetzal</option>
+        <option value="GYD">Guyanese Dollar</option>
+        <option value="HKD">Hong Kong Dollar</option>
+        <option value="HNL">Honduran Lempira</option>
+        <!-- <option value=""></option>
         <option value=""></option>
         <option value=""></option>
         <option value=""></option>
@@ -129,53 +169,46 @@
         <option value=""></option>
         <option value=""></option>
         <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        
+        <option value=""></option> -->
+     </select>
+     <input type="submit" value="" onclick="exchange()">
+     <div id="convert_rate">
+        <p id="currency"></p>
+        <p id="rate"></p>
+     </div>
+     
+
+
+
+
+     
+    <script src="https://unpkg.com/axios/dist/axios.min.js">
+
+        function exchange(){
+            let mySelect = document.getElementById('country');
+
+           let rate= mySelect.value
+        axios(`https://v6.exchangerate-api.com/v6/5a0315cec076009b55213a3f/latest/${rate}`)
+            .then(serverData =>{
+            let current_rate = serverData.data;
+            let convert = current_rate.conversion_rates;
+            for(let key in convert){
+                if (key){
+                    document.getElementById('currency').innerHTML += key;
+                    // console.log(key)
+            
+                }
+            }
+            for(let i in convert){
+                if (i){
+                    document.getElementById('rate').innerHTML += convert[i];
+            
+                }
+            }
+             
+            })
        
-        
-       
-    </select>
-    <script>
+    }
 
     </script>
 </body>
