@@ -8,18 +8,65 @@
 </head>
 <body>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+            /* color: white; */
+
+        }
         #convert_rate{
+            /* text-align: center; */
             width: 50%;
             display: flex;
             justify-content: space-between;
         }
         #convert-ratee{
+            /* text-align: center; */
             width: 50%;
             display: flex;
             justify-content: space-between;
         }
+         /* #currency{
+            /* color: white; */
+            /* margin: 0 20px; */
+        
 
+        
+        select{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        input{
+            background-color: red;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            border: 2px solid red;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        #container{
+            margin: 0 auto;
+            width: 100%;
+            background-color: darkblue;
+        }
+        h1{
+            margin-bottom: 10px;
+        }
+        
     </style>
+
+
+<h1><b style="color: red ;font-size:50px;box-shadow: 1px 1px 10px 1px blue;">W.W</b> EXCHANGE RATE</h1>
+
+<div id="container">
+
+
 
     <select name="Currency" id="country">
         <option value="AED">UAE Dirham</option>
@@ -78,121 +125,123 @@
         <option value="GYD">Guyanese Dollar</option>
         <option value="HKD">Hong Kong Dollar</option>
         <option value="HNL">Honduran Lempira</option>
-        <!-- <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option> -->
+        <option value="HRK">Croatian Kuna</option> 
+        <option value="HTG">Haitian Gourde</option> 
+        <option value="HUF">Hungarian Forint</option> 
+        <option value="IDR">Indonesian Rupiah</option>    
+        <option value="ILS">Israeli New Shekel</option> 
+        <option value="IMP">Manx Pound</option> 
+        <option value="INR">Indian Rupee</option> 
+        <option value="IQD">Iraqi Dinar</option> 
+        <option value="IRR">Iranian Rial</option> 
+        <option value="ISK">Icelandic Króna</option> 
+        <option value="JEP">Jersey Pound</option> 
+        <option value="JMD">Jamaican Dollar</option> 
+        <option value="JOD">Jordanian Dinar</option> 
+        <option value="JPY">Japanese Yen</option> 
+        <option value="KES">Kenyan Shilling</option> 
+        <option value="KGS">Kyrgyzstani Som</option> 
+        <option value="KHR">Cambodian Riel</option> 
+        <option value="KID">Kiribati Dollar</option> 
+        <option value="KMF">Comorian Franc</option> 
+        <option value="KRW">South Korean Won</option> 
+        <option value="KWD">Kuwaiti Dinar</option> 
+        <option value="KYD">Cayman Islands Dollar</option> 
+        <option value="KZT">Kazakhstani Tenge</option> 
+        <option value="LAK">Lao Kip</option> 
+        <option value="LBP">Lebanese Pound</option> 
+        <option value="LKR">Sri Lanka Rupee</option> 
+        <option value="LRD">Liberian Dollar</option> 
+        <option value="LSL">Lesotho Loti</option>
+        <option value="LYD">Libyan Dinar</option> 
+        <option value="MAD">Moroccan Dirham</option> 
+        <option value="MDL">Moldovan Leu</option> 
+        <option value="MGA">Malagasy Ariary</option> 
+        <option value="MKD">Macedonian Denar</option> 
+        <option value="MMK">Burmese Kyat</option>
+        <option value="MNT">Mongolian Tögrög</option>
+        <option value="MOP">Macanese Pataca</option>
+        <option value="MRU">Mauritanian Ouguiya</option>
+        <option value="MUR">Mauritian Rupee</option>
+        <option value="MVR">Maldivian Rufiyaa</option>
+        <option value="MWK">Malawian Kwacha</option>
+        <option value="MXN">Mexican Peso</option>
+        <option value="MYR">Malaysian Ringgit</option>
+        <option value="MZN">Mozambican Metical</option>
+        <option value="NAD">Namibian Dollar</option>
+        <option value="NGN">Nigerian Naira</option>
+        <option value="NIO">Nicaraguan Córdoba</option>
+        <option value="NOK">Norwegian Krone</option>
+        <option value="NPR">Nepalese Rupee</option>
+        <option value="NZD">New Zealand Dollar</option>
+        <option value="OMR">Omani Rial</option>
+        <option value="PAB">Panamanian Balboa</option>
+        <option value="PEN">Peruvian Sol</option>
+        <option value="PGK">Papua New Guinean Kina</option>
+        <option value="PHP">Philippine Peso</option>
+        <option value="PKR">Pakistani Rupee</option>
+        <option value="PLN">Polish Złoty</option>
+        <option value="PYG">Paraguayan Guaraní</option>
+        <option value="QAR">Qatari Riyal</option>
+        <option value="RON">Romanian Leu</option>
+        <option value="RSD">Serbian Dinar</option>
+        <option value="RUB">Russian Ruble</option>
+        <option value="RWF">Rwandan Franc</option>
+        <option value="SAR">Saudi Riyal</option> 
+        <option value="SBD">Solomon Islands Dollar</option>
+        <option value="SCR">Seychellois Rupee</option>
+        <option value="SDG">Sudanese Pound</option>
+        <option value="SEK">Swedish Krona</option>
+        <option value="SGD">Singapore Dollar</option>
+        <option value="SHP">Saint Helena Pound</option>
+        <option value="SLE">Sierra Leonean Leone</option>
+        <option value="SOS">Somali Shilling</option>
+        <option value="SRD">Surinamese Dollar</option>
+        <option value="SSP">South Sudanese Pound</option>
+        <option value="STN">São Tomé and Príncipe Dobra</option>
+        <option value="SYP">Syrian Pound</option>
+        <option value="SZL">Eswatini Lilangeni</option>
+        <option value="THB">Thai Baht</option>
+        <option value="TJS">Tajikistani Somoni</option>
+        <option value="TMT">Turkmenistan Manat</option>
+        <option value="TND">Tunisian Dinar</option>
+        <option value="TOP">Tongan Pa'anga</option>
+        <option value="TRY">Turkish Lira</option>
+        <option value="TTD">Trinidad and Tobago Dollar</option>
+        <option value="TVD">Tuvaluan Dollar</option>
+        <option value="TWD">New Taiwan Dolla</option>
+        <option value="TZS">Tanzanian Shilling</option>
+        <option value="UAH">Ukrainian Hryvnia</option>
+        <option value="UGX">Ugandan Shilling</option>
+        <option value="USD">United States Dollar</option>
+        <option value="UYU">Uruguayan Peso</option>
+        <option value="UZS">Uzbekistani So'm</option>
+        <option value="VES">Venezuelan Bolívar Soberano</option>
+        <option value="VND">Vietnamese Đồng</option>
+        <option value="VUV">Vanuatu Vatu</option>
+        <option value="WST">Samoan Tālā</option>
+        <option value="XAF">Central African CFA Franc</option>
+        <option value="XCD">East Caribbean Dollar</option>
+        <option value="XDR">Special Drawing Rights</option>
+        <option value="XOF">West African CFA franc</option>
+        <option value="XPF">CFP Franc</option>
+        <option value="YER">Yemeni Rial</option>
+        <option value="ZAR">South African Rand</option>
+        <option value="ZMW">Zambian Kwacha</option>
+        <option value="ZWL">Zimbabwean Dollar</option>
+        
      </select>
      <input type="submit" value="CONVERT" onclick="exchange()">
      <div id="convert-ratee">
 
-
      </div>
+
      <div id="convert_rate">
         <p id="currency"></p>
         <p id="rate"></p>
      </div>
+
+</div>
 
      <!-- End of first innterface -->
      
@@ -216,19 +265,18 @@
             .then(serverData =>{
             let current_rate = serverData.data;
             let convert = current_rate.conversion_rates;
+            let exchangeconversion = JSON.stringify('rate');
+           
             for(let key in convert){
                 if (key){
                     document.getElementById('currency').innerHTML += key + `<br>`;
-                    // console.log(key);
             
                 }
-                // console.log(key);
             
             }
             for(let i in convert){
                 if (i){
                     document.getElementById('rate').innerHTML += convert[i] + `<br>`;
-                    // console.log(convert[i]);
                 }
             }
              
