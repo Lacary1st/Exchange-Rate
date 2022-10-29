@@ -5,86 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exchanged Rate</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            /* text-align: center; */
-        }
+    <h1><b style="color: red ;font-size:50px;box-shadow: 1px 1px 10px 1px blue;">W.W</b> EXCHANGE RATE</h1>
 
-        #convert_rate{
-            width: 50%;
-            display: flex;
-            justify-content: space-between;
-        }
-        #convert-ratee{
-            width: 50%;
-            display: flex;
-            justify-content: space-between;
-        }
-         
-
-        
-        select{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        #xchange{
-            background-color: red;
-            width: 100%;
-            color: white;
-            padding: 10px;
-            border: 2px solid red;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-        #container{
-            margin-bottom: 30px;
-            /* margin: 0 auto; */
-            width: 100%;
-            background-color: darkblue;
-        }
-        h1{
-            margin-bottom: 20px;
-        }
-        marquee{
-            scroll-behavior: smooth;
-            font-size: 15px;
-            padding: 5px;
-            direction: ltr;
-            
-        }
-        h4{
-            margin: 10px auto;
-
-            color: white;
-            background: blue;
-            text-transform: uppercase;
-            padding: 10px;
-            text-align: center;
-        }
-        h2{
-            text-decoration: underline black;
-            
-            /* width: 30%; */
-            /* background: blue; */
-            margin-bottom: 10px;
-            word-spacing: 5px;
-        }
-        /* End of first interface */
-        
-    </style>
-
-
-<h1><b style="color: red ;font-size:50px;box-shadow: 1px 1px 10px 1px blue;">W.W</b> EXCHANGE RATE</h1>
-
-<div id="container">
+    <div id="container">
     <marquee style="color: white;"><i>W.W Exchange Rate brings you the latest and current exchange rates of currencies all over the world and We also give you the best exchange rate!!!</i></marquee>
   
 
@@ -265,7 +191,7 @@
 
 </div>
 
-     <!-- End of first interface -->
+     
      <h2>ABOUT US</h1>
      
 
@@ -685,8 +611,7 @@
             })
        
     }
-    // End of javascript for first interface
-
+    
 
     function convert(){
     let displayamount  = document.getElementById('amount-display');
@@ -702,9 +627,7 @@
         let amountrate = serverData.data;
         let amountdisplay = amountrate.conversion_result + " " + rate.conversion_rate;
         let convert = JSON.stringify(amountdisplay);
-        // console.log(typeof (conversion))
         document.getElementById('display').innerHTML= convert;
-        // console.log(serverData.data)
         }).catch(err =>{
             console.log(err)
         })
