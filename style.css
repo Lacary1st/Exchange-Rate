@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* text-align: center; */
 }
 
 #convert_rate{
@@ -36,7 +35,6 @@ select{
 }
 #container{
     margin-bottom: 30px;
-    /* margin: 0 auto; */
     width: 100%;
     background-color: darkblue;
 }
@@ -50,6 +48,7 @@ marquee{
     direction: ltr;
     
 }
+
 h4{
     margin: 10px auto;
 
@@ -57,13 +56,53 @@ h4{
     background: blue;
     text-transform: uppercase;
     padding: 10px;
-    text-align: center;
 }
 h2{
-    text-decoration: underline black;
-    
-    /* width: 30%; */
-    /* background: blue; */
+    color: white;
+    background: blue;
     margin-bottom: 10px;
     word-spacing: 5px;
+}
+
+#from-display{
+    width: 60%;
+    margin: 10px auto;
+    background-color: red;
+}
+#to-display{
+    width: 60%;
+    margin: 10px auto;
+    background-color:darkblue;
+}
+.tofrom{
+    /* padding: 5px; */
+    color: white;
+    /* margin-top: 10px; */
+}
+#amount-output{
+    text-align: center;
+    margin: 10px auto;
+    width: 100%;
+
+}
+#amount-output > input{
+    border-radius: 10px;
+    padding: 5px;
+    width:50%;
+}
+
+#amount{
+    background-color: rgb(213, 208, 208);
+    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#container2{
+    border-radius: 20px;
+    padding: 20px;
+    /* text-align: center; */
+    margin: 10px auto;
+    width: 100%;
+    background-color: rgb(213, 208, 208);
 }
