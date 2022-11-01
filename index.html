@@ -572,15 +572,24 @@
         <div id="amount-output">
             <input type="submit" value="CONVERT" onclick="convert()">
         </div>
+        <div id="display-xchangerate">
+            <p id="one"></p>
+            <p id="two"></p>
+
+        </div>
+        <div>
+            <p id="showxchange1"></p>
+            <p id="showxchange2"></p>
+        </div>
         
     </section>
 
-     <p> If you have any questions about our data and what it's suitable for please ask our support - we're here to help.</p>
+     <!-- <p> If you have any questions about our data and what it's suitable for please ask our support - we're here to help.</p>
      <div id="contact">
 
      </div>
 
-    
+     -->
      
      
 
@@ -622,29 +631,33 @@
     }
     
 
-    // function convert(){
-    // let displayamount  = document.getElementById('amount-display');
-    //     displayAmount = displayamount.value;
-    // let output = document.getElementById('second-code');
-    //     displayOutput = displayoutput.value;
-    // let amount = document.getElementById('amount');
-    //     amounts = amount.value;
+    function convert(){
+    let displayamount  = document.getElementById('amount-display');
+        displayAmount = displayamount.value;
+    let output = document.getElementById('output-display');
+        displayOutput = output.value;
+    let amount = document.getElementById('amount');
+        amounts = amount.value;
 
-    //     axios(`https://v6.exchangerate-api.com/v6/5a0315cec076009b55213a3f/pair/${displayAmount}/${displayOutput}/${amounts}
-    //     `)
-    //     .then(serverData =>{
-    //     let amountrate = serverData.data;
-    //     let amountdisplay = amountrate.conversion_rates;
-    //     let refrenceError= amountrate.result;
-    //     refrenceError= 'Rate amount greater than 1';
-    //     if (x> 0){
-    //         document.getElementById('').innerHTML= amountdisplay[i] +`<br>`;
-    //     }
-    //     else{
-    //         document.getElementById('').innerHTML+= refrenceError;
-    //     }
-    
+        axios(`https://v6.exchangerate-api.com/v6/5a0315cec076009b55213a3f/pair/${displayAmount}/${displayOutput}/${amounts}`)
+        .then(serverData =>{
+        let amountrate = serverData.data;
+        let amountdisplay = document.getElementById('showxchange1');
+        let c_rate = amountrate.conversion_rate;
+        let pairResult =document.getElementById('showxchange2');
+        let cr= amountrate.conversion_result;
+        let error='Rate amount must  be greater than 1';
         
+        if (amount > 0){
+            document.getElementById('one').innerHTML= amountrate[i];
+        }
+        else{
+            document.getElementById('two').innerHTML+= error ;
+        }
+    
+    }
+        )
+}
         
         
 
